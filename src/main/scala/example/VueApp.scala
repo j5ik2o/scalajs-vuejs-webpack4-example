@@ -1,5 +1,5 @@
 package example
-import example.components.HelloWorld
+import example.views.{About, Home}
 import scalajs.vue.{Vue, VueRouter}
 
 import scala.scalajs.js
@@ -18,8 +18,13 @@ object VueApp {
         routes = js.Array(
           js.Dynamic.literal(
             path = "/",
-            name = "Hello World",
-            component = HelloWorld
+            name = "home",
+            component = Home
+          ),
+          js.Dynamic.literal(
+            path = "/about",
+            name = "about",
+            component = About
           )
         )
       )
@@ -27,11 +32,9 @@ object VueApp {
     /* eslint-disable no-new */
     new Vue(
       js.Dynamic.literal(
-        el = "#app",
         router = router,
-        components = App,
-        template = "<App/>"
+        render = { h: js.Function1[js.Any, js.Any] => h(App)}
       )
-    )
+    ).$mount("#app")
   }
 }
