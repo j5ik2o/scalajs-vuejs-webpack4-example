@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="resources/assets/logo.png">
+    <img alt="Vue logo" v-bind:src="require('resources/assets/logo.png')">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

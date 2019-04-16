@@ -25,14 +25,13 @@ module.exports = {
         test: /\.css$/,
         use: [ 'vue-style-loader', 'style-loader', 'css-loader' ]
       },
-      // "file" loader for svg
       {
-        test: /\.svg$/,
+        test: /\.(svg|png)$/,
         use: [
           {
             loader: 'file-loader',
-            query: {
-              name: 'static/media/[name].[hash:8].[ext]'
+            options: {
+              name: '[path][name].[ext]'
             }
           }
         ]
