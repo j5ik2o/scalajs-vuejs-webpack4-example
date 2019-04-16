@@ -4,6 +4,8 @@ name := "scalajs-vuejs-webpack4-example"
 
 scalaVersion := "2.12.8"
 
+resolvers += Resolver.bintrayRepo("random-scalor", "maven")
+
 npmDependencies in Compile ++=Seq(
   "vue" -> "^2.5.2",
   "vue-router" -> "^3.0.1"
@@ -23,6 +25,7 @@ npmDevDependencies in Compile ++= Seq(
 "webpack-merge" -> "4.2.1"
 
 )
+
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.9.5",
