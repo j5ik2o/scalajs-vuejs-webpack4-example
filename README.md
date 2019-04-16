@@ -27,6 +27,8 @@ refer to http://localhost:8080/
 $ sbt build
 ```
 
+## Examples referred to in order to consider the build configuration
+
 - [random-scalor/scala-js-vue](https://github.com/random-scalor/scala-js-vue)
 - [fancellu/scalajs-vue](https://github.com/fancellu/scalajs-vue/tree/master/src/main/scala/com/felstar/scalajs/vue)
 - [massung/scala-js-vue](https://github.com/massung/scala-js-vue/tree/master/src/main/scala/blog/codeninja/scalajs/vue)
